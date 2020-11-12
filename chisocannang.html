@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+<h2>Chỉ Số Cân Nặng</h2>
+<label for="weight"></label>
+Weight &nbsp; <input type="number" id="weight">
+<br>
+<br>
+<label for="height"></label>
+Height &nbsp;<input type="number" id="height">
+<br>
+<br>
+<input type="button" onclick="Display()" value="BMI">
+<p id="result"></p>
+</body>
+<script>
+    function Display() {
+    let W = +document.getElementById("weight").value;
+    let H = +document.getElementById("height").value;
+    let BMI = W / (H * H);
+        if (BMI < 18.5) {
+            document.getElementById("result").innerText ="Chỉ số BMI là " + BMI + " :Underweight";
+        } else if (BMI < 25) {
+            document.getElementById("result").innerText ="Chỉ số BMI là " + BMI + " :Normal";
+        } else if (BMI < 30) {
+            document.getElementById("result").innerText ="Chỉ số BMI là " + BMI + " :Overweight";
+        } else {
+            document.getElementById("result").innerText ="Chỉ số BMI là " + BMI + " :Obese";
+        }
+    }
+</script>
+</html>

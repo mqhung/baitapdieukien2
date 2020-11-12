@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MayTinhCoBan</title>
+    <style type="text/css">
+        table.mt {
+            border: 2px black;
+            width: 400px;
+            height: 500px
+        }
+
+        #result {
+            width: 363px;
+            height: 50px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <table class="mt">
+        <tr class="mt">
+            <td colspan="4"><input type="text" id="result" value=""></td>
+        </tr>
+        <tr class="mt">
+            <td class="mt"><input type="button" value="1" id="one" style="width: 70px;height: 70px"
+                                  onclick="number(value);"></td>
+            <td class="mt"><input type="button" value="2" id="two" style="width: 70px;height: 70px"
+                                  onclick="number(value);"></td>
+            <td class="mt"><input type="button" value="3" id="three" style="width: 70px;height: 70px"
+                                  onclick="number(value);"></td>
+            <td class="mt"><input type="button" value="+" id="add" style="width: 70px;height: 70px"
+                                  onclick="number(value);"></td>
+        </tr>
+        <tr class="mt">
+            <td class="mt"><input type="button" value="4" id="four" style="width: 70px;height: 70px"
+                                  onclick="Number(value);"></td>
+            <td class="mt"><input type="button" value="5" id="five" style="width: 70px;height: 70px"
+                                  onclick="number(value);"></td>
+            <td class="mt"><input type="button" value="6" id="six" style="width: 70px;height: 70px"
+                                  onclick="number(value);"></td>
+            <td class="mt"><input type="button" value="-" id="sub" style="width: 70px;height: 70px"
+                                  onclick="number(value);"></td>
+        </tr>
+        <tr class="mt">
+            <td class="mt"><input type="button" value="7" id="seven" style="width: 70px;height: 70px"
+                                  onclick="number(value);"></td>
+            <td class="mt"><input type="button" value="8" id="eight" style="width: 70px;height: 70px"
+                                  onclick="number(value);"></td>
+            <td class="mt"><input type="button" value="9" id="nine" style="width: 70px;height: 70px"
+                                  onclick="number(value);"></td>
+            <td class="mt"><input type="button" value="*" id="multi" style="width: 70px;height: 70px"
+                                  onclick="number(value);"></td>
+        </tr>
+        <tr class="mt">
+            <td class="mt"><input type="button" value="C" id="del" style="width: 70px;height: 70px"
+                                  onclick="dele(value);"></td>
+            <td class="mt"><input type="button" value="0" id="zero" style="width: 70px;height: 70px"
+                                  onclick="number(value);"></td>
+            <td class="mt"><input type="button" value="=" id="equal" style="width: 70px;height: 70px"
+                                  onclick="equalto(value);"></td>
+            <td class="mt"><input type="button" value="/" id="div" style="width: 70px;height: 70px"
+                                  onclick="number(value);">
+            </td>
+        </tr>
+    </table>
+    <script>
+        let a = "";
+        let result;
+
+        function number(value) {
+            a = a + value;
+            document.getElementById('result').value = a;
+        }
+
+        function equalto(value) {
+            result = eval(a);
+            document.getElementById('result').value = result;
+        }
+
+        function dele(value) {
+            result = "";
+            a = "";
+            document.getElementById('result').value = result;
+        }
+    </script>
+</form>
+</body>
+</html>
